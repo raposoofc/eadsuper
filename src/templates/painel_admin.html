@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador - EAD Super</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/painel_admin.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="{{ url_for('index') }}" class="logo-sidebar">EAD Super</a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Página Inicial</a></li>
+                    <li><a href="#"><i class="fas fa-user-tie"></i> Administradores</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Usuários/Alunos</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+                    <li><a href="{{ url_for('logout') }}" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <button id="sidebarToggle" class="sidebar-toggle-btn"><i class="fas fa-bars"></i></button>
+                    <span>Página inicial > Administradores</span>
+                </div>
+                <div class="navbar-right">
+                    <span class="user-info">Olá, <span id="userName"></span></span>
+                    <i class="fas fa-user-circle user-avatar"></i>
+                </div>
+            </header>
+
+            <main class="page-content">
+                <section class="admin-section">
+                    <div class="section-header">
+                        <h2>ADMINISTRADORES</h2>
+                        <div class="header-actions">
+                            <button class="btn secondary"><i class="fas fa-file-export"></i> Exportar</button>
+                            <button id="addAdminBtn" class="btn primary"><i class="fas fa-plus"></i> Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div id="adminFormContainer" class="form-container hidden">
+                        <h3><span id="formTitle">Adicionar Novo Administrador</span></h3>
+                        <form id="adminForm">
+                            <input type="hidden" id="adminEmailOriginal"> <div class="form-grid">
+                                <div class="input-group">
+                                    <label for="adminNomeCompleto">Nome Completo</label>
+                                    <input type="text" id="adminNomeCompleto" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="adminEmail">E-mail</label>
+                                    <input type="email" id="adminEmail" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="adminNomeUsuario">Nome de Usuário</label>
+                                    <input type="text" id="adminNomeUsuario" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="adminCpf">CPF</label>
+                                    <input type="text" id="adminCpf">
+                                </div>
+                                <div class="input-group">
+                                    <label for="adminTelefone">Telefone</label>
+                                    <input type="tel" id="adminTelefone">
+                                </div>
+                                <div class="input-group" id="adminSenhaGroup">
+                                    <label for="adminSenha">Senha</label>
+                                    <input type="password" id="adminSenha" placeholder="Deixe em branco para manter a atual na edição">
+                                </div>
+                                <div class="input-group">
+                                    <label for="adminRole">Função</label>
+                                    <select id="adminRole">
+                                        <option value="user">Aluno</option>
+                                        <option value="admin">Administrador</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary">Salvar</button>
+                                <button type="button" id="cancelAdminBtn" class="btn secondary">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table id="adminTable">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Usuário</th>
+                                    <th>Função</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

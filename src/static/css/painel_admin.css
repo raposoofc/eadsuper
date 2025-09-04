@@ -1,0 +1,293 @@
+/* src/static/css/admin_panel.css */
+
+:root {
+    --primary-color: #512da8;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --text-color: #333;
+    --text-light: #f8f9fa;
+    --background-light: #f4f7f6;
+    --card-background: #fff;
+    --border-color: #e0e0e0;
+    --font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- Estilos da Sidebar --- */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+.logo-sidebar {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+    background-color: #34495e;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* --- Estilos do Conteúdo Principal --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+/* --- Estilos da Navbar Superior --- */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 15px;
+    color: var(--secondary-color);
+}
+
+.user-info {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.user-avatar {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+/* --- Estilos da Página de Conteúdo --- */
+.page-content {
+    padding: 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-actions .btn {
+    margin-left: 10px;
+}
+
+/* --- Estilos do Formulário --- */
+.form-container {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.form-actions .btn {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Estilos da Tabela --- */
+.table-responsive {
+    overflow-x: auto;
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Garante que a tabela não fique muito pequena */
+}
+
+.table-responsive th,
+.table-responsive td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-responsive th {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table-responsive tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons .btn {
+    margin-right: 5px;
+}
+
+/* --- Estilos de botões genéricos --- */
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.9rem;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn.danger {
+    background-color: var(--danger-color);
+    color: var(--text-light);
+}
+
+.btn.danger:hover {
+    background-color: #c82333;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        transform: none;
+        box-shadow: none;
+        z-index: 100;
+        position: relative;
+    }
+
+    .sidebar.collapsed {
+        transform: none;
+    }
+    
+    .sidebar-toggle-btn {
+        display: none;
+    }
+    
+    .top-navbar {
+        padding: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-responsive table {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "nome": "Administrador",
+      "cpf": "000.000.000-00",
+      "telefone": "00000000000",
+      "email": "administrador@gmail.com",
+      "nomeUsuario": "admsup2025",
+      "senha": "$2b$12$QjE5blAzAeFfE.Pf4DpSoeSVIXBpmDGhOUYTP33hHsP/V72pUC47.",
+      "role": "admin"
+    },
+    {
+      "nome": "Rodolpho Silva Rapôso",
+      "cpf": "013.576.314-21",
+      "telefone": "82994335520",
+      "email": "raposotiweb@gmail.com",
+      "nomeUsuario": "raposo1987",
+      "senha": "$2b$12$b8hOMtnU6zGnzBy/tSN.5uQNAGLDpCobHNWM2Lh.0neheof7/45.W",
+      "role": "user"
+    }
+  ]
+}

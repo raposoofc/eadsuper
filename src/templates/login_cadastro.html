@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar e Cadastrar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_cadastro.css') }}">
+    </head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="cadastroForm">
+                <h1>Cadastre-se</h1>
+                <span>Preencha seus dados para criar sua conta</span>
+                <input type="text" id="nomeCompleto" placeholder="Nome Completo" required>
+                <input type="text" id="cpf" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00" required>
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="text" id="nomeUsuario" placeholder="Nome de Usuário" pattern="[a-z]{6}[0-9]{4}" title="6 letras minúsculas e 4 números" required>
+                <input type="password" id="senhaCadastro" placeholder="Senha" minlength="6" maxlength="12" required>
+                <small>Senha: 6 a 12 dígitos, 1 maiúscula, 1 minúscula, 1 número, 1 caractere especial.</small>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form id="loginForm">
+                <h1>Entrar</h1>
+                <span>Use seu nome de usuário ou e-mail</span>
+                <input type="text" id="loginUsuario" placeholder="Usuário ou E-mail" required>
+                <input type="password" id="loginSenha" placeholder="Senha" required>
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Entre com seus dados para acessar o painel de aluno.</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá, Amigo!</h1>
+                    <p>Cadastre-se com seus dados para começar a aprender conosco.</p>
+                    <button class="hidden" id="register">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <a href="{{ url_for('index') }}" class="back-to-home-btn" title="Voltar para a tela inicial">
+        <img src="{{ url_for('static', filename='images/back_arrow.png') }}" alt="Voltar">
+    </a>
+    
+</body>
+</html>

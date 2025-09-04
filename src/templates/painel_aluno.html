@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/painel_aluno.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('index') }}" class="logo">Sua Logo</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('logout') }}" id="logoutBtn" class="btn btn-logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Bem-vindo, <span id="userName"></span>!</h1>
+        <p>Este é o seu painel de controle. Abaixo você pode ver seus dados cadastrais.</p>
+
+        <section class="user-data-section">
+            <h2>Meus Dados</h2>
+            
+            <div class="registration-form-card">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <span id="userNome">Carregando...</span>
+                </div>
+                <div class="form-group">
+                    <label>E-mail:</label>
+                    <span id="userEmail">Carregando...</span>
+                </div>
+                <div class="form-group">
+                    <label>Nome de Usuário:</label>
+                    <span id="userNomeUsuario">Carregando...</span>
+                </div>
+                <div class="form-group">
+                    <label>CPF:</label>
+                    <span id="userCpf">Carregando...</span>
+                </div>
+                <div class="form-group">
+                    <label>Telefone:</label>
+                    <span id="userTelefone">Carregando...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/gmail.png') }}" alt="Gmail"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* src/static/css/carousel.css - Versão Final */
+
+:root {
+    --primary-color: #512da8;
+    --secondary-color: #f39c12;
+    --card-bg: #fff;
+    --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.static-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 20px 0;
+}
+
+.course-card {
+    flex: 0 0 250px; /* Tamanho fixo para os cards */
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito */
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: scale(1.05); /* Efeito de expansão ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.course-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.course-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
+.course-card .btn {
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.course-card .btn:hover {
+    background-color: #512da8;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .static-cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .course-card {
+        flex: 0 0 90%;
+        max-width: 350px;
+    }
+}
