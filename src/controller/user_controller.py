@@ -16,7 +16,7 @@ def cadastro():
     else:
         return jsonify({"message": response["message"]}), 409
 
-@user_blueprint.route("/login", methods=["POST"])
+@user_blueprint.route("/login", methods=["POST"]) # rota de login
 def login():
     credentials = request.get_json()
     response = user_service.authenticate_user(

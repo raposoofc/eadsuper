@@ -2,7 +2,7 @@
 
 import re
 import io
-from flask_bcrypt import Bcrypt
+from flask_bcrypt import Bcrypt 
 from ..repository import user_repository
 from ..model.user import User
 
@@ -17,7 +17,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 
 
-bcrypt = Bcrypt()
+bcrypt = Bcrypt() # bcrypt: Objeto para lidar com a criptografia de senhas. A criptografia é usada para que a senha real do usuário nunca seja armazenada em texto puro, aumentando a segurança.
 
 # Registra uma fonte que suporta caracteres acentuados
 try:
@@ -29,18 +29,18 @@ class UserService:
     def __init__(self):
         self.repository = user_repository
 
-    def validate_password(self, senha):
+    def validate_password(self, senha): # Valida se a senha atende aos critérios de segurança
         regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=\-{}[\]|\\:;\"'<,>.?/])(.{6,12})$"
         return re.match(regex, senha)
 
-    def register_user(self, user_data):
+    def register_user(self, user_data): # Registra um novo usuário.
         if self.repository.get_user_by_email_or_username(user_data.get('email')) or \
            self.repository.get_user_by_email_or_username(user_data.get('nomeUsuario')):
             return {"success": False, "message": "Nome de usuário ou e-mail já cadastrados."}
         
-        senha_hash = bcrypt.generate_password_hash(user_data['senha']).decode('utf-8')
+        senha_hash = bcrypt.generate_password_hash(user_data['senha']).decode('utf-8') # Gera o hash da senha para armazenamento seguro.
         
-        new_user = User(
+        new_user = User( # Cria uma nova instância do usuário com os dados fornecidos.
             nome=user_data.get('nome'),
             cpf=user_data.get('cpf'),
             telefone=user_data.get('telefone'),
@@ -53,13 +53,13 @@ class UserService:
         self.repository.add_user(new_user.to_dict())
         return {"success": True, "message": "Cadastro realizado com sucesso!"}
 
-    def authenticate_user(self, identifier, senha):
+    def authenticate_user(self, identifier, senha): # Autentica um usuário com base no e-mail ou nome de usuário e senha.
         user = self.repository.get_user_by_email_or_username(identifier)
-        if user and bcrypt.check_password_hash(user['senha'], senha):
+        if user and bcrypt.check_password_hash(user['senha'], senha): # Verifica se a senha fornecida corresponde ao hash armazenado.
             return {"success": True, "user": user}
         return {"success": False, "message": "Credenciais inválidas."}
 
-    def update_user(self, email, updated_data):
+    def update_user(self, email, updated_data): # Atualiza os dados do usuário, exceto a senha.
         data = self.repository.load_data()
         found_user = next((u for u in data['users'] if u['email'] == email), None)
         
@@ -81,7 +81,7 @@ class UserService:
             return {"success": True, "message": "Usuário excluído com sucesso."}
         return {"success": False, "message": "Usuário não encontrado."}
 
-    def export_users_to_xlsx(self):
+    def export_users_to_xlsx(self): # Exporta os dados dos usuários para um arquivo XLSX.
         try:
             users_data = self.repository.get_all_users()
             workbook = Workbook()
@@ -109,7 +109,7 @@ class UserService:
         except Exception as e:
             return {"success": False, "message": f"Erro ao exportar para XLSX: {e}"}
 
-    def export_users_to_pdf(self):
+    def export_users_to_pdf(self): # Exporta os dados dos usuários para um arquivo PDF.
         try:
             users_data = self.repository.get_all_users()
             file_stream = io.BytesIO()
