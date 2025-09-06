@@ -1,52 +1,46 @@
-# EAD Super
+📚 EAD Super - Plataforma de Cursos Online
+Este repositório contém o projeto EAD Super, uma plataforma de Ensino a Distância desenvolvida com foco em uma interface simples e intuitiva para o aprendizado. A plataforma oferece um ambiente completo para gerenciar cursos e conteúdos de forma eficiente.
 
-Este é um projeto de um sistema de Ensino a Distância (EAD) simples, desenvolvido em Python com o framework Flask.
+🌟 Sobre o Projeto
+O EAD Super foi criado com o objetivo de demonstrar habilidades em desenvolvimento front-end, focado em uma experiência de usuário fluida e um design responsivo. O projeto serve como base para a criação de soluções educacionais acessíveis e de alta qualidade.
 
-## Funcionalidades Implementadas
-- **Página Inicial (Landing Page):** Uma apresentação visual dos cursos com cards estáticos e um layout otimizado.
-- **Autenticação de Usuários:** Funcionalidades de login e cadastro.
-- **Painel do Aluno:** Uma área restrita onde o aluno pode visualizar seus dados cadastrais em um formato de ficha.
-- **Painel do Administrador:** Uma área restrita para o administrador, com um layout de cards similar ao do aluno.
-- **Responsividade:** O layout de todas as páginas se adapta a diferentes tamanhos de tela (desktop, tablet e smartphone).
+💻 Tecnologias Utilizadas
+<p>
+<img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo" />&nbsp;
+<img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo" />&nbsp;
+<img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" />&nbsp;
+<img src="https://skillicons.dev/icons?i=bootstrap" height="40" alt="bootstrap logo" />&nbsp;
+<img src="https://skillicons.dev/icons?i=figma" height="40" alt="figma logo" />&nbsp;
+<img src="https://skillicons.dev/icons?i=vscode" height="40" alt="Visual Studio Code logo" />&nbsp;
+</p>
 
-## Estrutura do Projeto
-O projeto foi organizado em um modelo de arquitetura por camadas para garantir a separação de responsabilidades e a manutenibilidade do código. Os dados são persistidos em arquivos JSON.
+🚀 Como Rodar o Projeto Localmente
+O projeto é 100% front-end e pode ser visualizado diretamente no navegador.
 
----
+Passo a passo:
+Clone o repositório:
 
-## Como Rodar o Projeto
+git clone [https://github.com/raposoofc/eadsuper.git](https://github.com/raposoofc/eadsuper.git)
 
-Siga os passos abaixo para executar o projeto em seu ambiente local.
+Abra a pasta do projeto.
 
-### Pré-requisitos
-- Python 3.x
-- Git (opcional, para clonar o repositório)
+Abra o arquivo index.html em seu navegador de preferência.
 
-### Passos
+📬 Conecte-se comigo
+<p>
+<a href="https://www.linkedin.com/in/raposoofc" target="_blank">
+<img src="https://skillicons.dev/icons?i=linkedin" height="50" alt="LinkedIn logo"/>
+</a>&nbsp;
 
-1. **Clone o repositório:**
-   ```bash
-  git clone [https://github.com/raposoofc/eadsuper](https://github.com/raposoofc/eadsuper)
-  cd eadsuper
-  
-2. Crie e ative o ambiente virtual:
+<a href="mailto:raposotiweb@gmail.com" target="_blank">
+<img src="https://skillicons.dev/icons?i=gmail" height="50" alt="Gmail logo"/>
+</a>&nbsp;
 
-python -m venv venv
-# No Windows
-.\venv\Scripts\activate
-# No macOS/Linux
-source venv/bin/activate
-Instale as dependências:
+<a href="https://www.instagram.com/raposoofc.87" target="_blank">
+<img src="https://skillicons.dev/icons?i=instagram" height="50" alt="Instagram logo"/>
+</a>&nbsp;
 
-3. Instale as dependências:
-
-pip install -r requirements.txt
-Execute a aplicação:
-
-4. Execute a aplicação:
-
-python app.py
-
----
-
-A aplicação estará disponível em http://127.0.0.1:5000.
+<a href="https://github.com/raposoofc" target="_blank">
+<img src="https://skillicons.dev/icons?i=github" height="50" alt="GitHub logo"/>
+</a>&nbsp;
+</p>
