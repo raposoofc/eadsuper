@@ -10,7 +10,9 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="{{ url_for('index') }}" class="logo">Sua Logo</a>
+            <a href="{{ url_for('index') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo EAD Super" class="navbar-logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="{{ url_for('logout') }}" id="logoutBtn" class="btn btn-logout">Sair</a></li>
             </ul>

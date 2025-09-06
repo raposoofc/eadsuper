@@ -14,7 +14,9 @@
 
     <header class="main-header">
         <div class="container header-container">
-            <a href="{{ url_for('index') }}" class="logo">EAD Super</a>
+            <a href="{{ url_for('index') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo EAD Super" class="navbar-logo">
+            </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#cursos">Cursos</a></li>

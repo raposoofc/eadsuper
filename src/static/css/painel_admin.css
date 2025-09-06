@@ -256,6 +256,19 @@ body {
     background-color: #c82333;
 }
 
+.navbar-logo {
+    height: 80px; /* Altura ideal para uma navbar */
+    width: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle;
+}
+
+/* Ajuste para o contêiner do logo na navbar, se necessário */
+.navbar .logo {
+    display: flex; /* Garante que a imagem se ajuste bem */
+    align-items: center;
+    text-decoration: none;
+}
+
 /* --- Responsividade --- */
 @media (max-width: 768px) {
     .dashboard-container {
