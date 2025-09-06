@@ -1,52 +1,93 @@
-# EAD Super
-
-Este é um projeto de um sistema de Ensino a Distância (EAD) simples, desenvolvido em Python com o framework Flask.
-
-## Funcionalidades Implementadas
-- **Página Inicial (Landing Page):** Uma apresentação visual dos cursos com cards estáticos e um layout otimizado.
-- **Autenticação de Usuários:** Funcionalidades de login e cadastro.
-- **Painel do Aluno:** Uma área restrita onde o aluno pode visualizar seus dados cadastrais em um formato de ficha.
-- **Painel do Administrador:** Uma área restrita para o administrador, com um layout de cards similar ao do aluno.
-- **Responsividade:** O layout de todas as páginas se adapta a diferentes tamanhos de tela (desktop, tablet e smartphone).
-
-## Estrutura do Projeto
-O projeto foi organizado em um modelo de arquitetura por camadas para garantir a separação de responsabilidades e a manutenibilidade do código. Os dados são persistidos em arquivos JSON.
+# 📚 EADsuper - Plataforma de Educação a Distância
 
 ---
 
-## Como Rodar o Projeto
 
-Siga os passos abaixo para executar o projeto em seu ambiente local.
+## 📝 Sobre o projeto
 
-### Pré-requisitos
-- Python 3.x
-- Git (opcional, para clonar o repositório)
+O "EADsuper" é uma plataforma de Educação a Distância projetada para oferecer uma experiência de aprendizado online fluida e acessível, com foco principal no back-end.
 
-### Passos
+Acesse a plataforma aqui: Visite a plataforma Enfermeiro Onco-expert (https://eadsuper.onrender.com/)
 
-1. **Clone o repositório:**
-   ```bash
-  git clone [https://github.com/raposoofc/eadsuper](https://github.com/raposoofc/eadsuper)
-  cd eadsuper
-  
-2. Crie e ative o ambiente virtual:
-
-python -m venv venv
-# No Windows
-.\venv\Scripts\activate
-# No macOS/Linux
-source venv/bin/activate
-Instale as dependências:
-
-3. Instale as dependências:
-
-pip install -r requirements.txt
-Execute a aplicação:
-
-4. Execute a aplicação:
-
-python app.py
+O projeto demonstra as funcionalidades e acessos de perfis de usuários distintos, como administrador e aluno, cada um com acessos e funcionalidades diferentes. A interface intuitiva facilita a gestão e o acesso a cursos, aulas e materiais educativos, garantindo uma experiência de aprendizado otimizada para o aluno e um controle completo para o administrador.
 
 ---
 
-A aplicação estará disponível em http://127.0.0.1:5000.
+## 🚀 Tecnologias e Ferramentas
+
+### 🌐 Front-end
+<p>
+  <img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=bootstrap" height="40" alt="bootstrap logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" />&nbsp;
+</p>
+
+### ⚙️ Back-end
+
+<p>
+<img src="https://skillicons.dev/icons?i=python" height="40" alt="python logo" />&nbsp;
+</p>
+
+### 🛠️ Ferramentas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=figma" height="40" alt="figma logo" />&nbsp;
+  <img src="https://cdn.simpleicons.org/canva/00C4CC" height="40" alt="canva logo" />&nbsp;
+  <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="Visual Studio Code logo" />&nbsp;
+</p>
+
+---
+
+## 🌟 Recursos e Funcionalidades
+
+- Gerenciamento de Cursos: Estrutura para criação e organização de conteúdos educativos.
+
+- Sistema de Autenticação: Gerenciamento de login e diferentes perfis de usuário (administrador e aluno).
+
+- Controle de Acessos: Funcionalidades específicas para cada tipo de usuário.
+
+- Responsividade: Interface otimizada para ser utilizada em qualquer dispositivo (desktops, tablets e smartphones).
+
+- Interface de Usuário (UI/UX): Design focado na facilidade de uso para alunos e instrutores.
+
+- Interatividade: Navegação fluida e interação entre as diferentes seções da plataforma.
+
+---
+
+## 🔥 GitHub Streak
+
+### 📊 Estatísticas do GitHub
+
+<div align="center" style="display: flex; gap: 40px;">
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=raposoofc&show_icons=true&theme=radical" alt="Estatísticas do GitHub"/>
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raposoofc&layout=compact&theme=radical" alt="Linguagens mais usadas"/>
+
+</div>
+
+---
+
+## 📬 Conecte-se comigo  
+
+<p>
+  <a href="https://www.linkedin.com/in/raposoofc" target="_blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo"/>
+  </a>&nbsp;
+  
+  <a href="mailto:raposotiweb@gmail.com" target="_blank">
+    <img src="https://skillicons.dev/icons?i=gmail" height="40" alt="Gmail logo"/>
+  </a>&nbsp;
+  
+  <a href="https://www.instagram.com/raposoofc.87" target="_blank">
+    <img src="https://skillicons.dev/icons?i=instagram" height="40" alt="Instagram logo"/>
+  </a>&nbsp;
+  
+  <a href="https://github.com/raposoofc" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub logo"/>
+  </a>&nbsp;
+</p>
